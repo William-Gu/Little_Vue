@@ -1,3 +1,4 @@
+// 监听器Observer，用来劫持并监听所有属性，如果有变动的，就通知订阅者。
 function Observer(data) {
     this.data = data;
     this.walk(data);
