@@ -16,13 +16,13 @@ Observer.prototype = {
         Object.defineProperty(data, key, {
             enumerable: true,
             configurable: true,
-            get: function getter () {
+            get: function() {
                 if (Dep.target) {
                     dep.addSub(Dep.target);
                 }
                 return val;
             },
-            set: function setter (newVal) {
+            set: function(newVal) {
                 if (newVal === val) {
                     return;
                 }
